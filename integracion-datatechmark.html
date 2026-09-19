@@ -1,0 +1,88 @@
+<!--
+  BLOQUE PARA DATATECHMARK
+  Colócalo donde quieras mostrar "Recursos gratuitos".
+  Si el simulador queda publicado en otra URL, cambia /istqb-simulator/.
+-->
+<section class="dtm-resource-section" id="recursos">
+  <div class="dtm-resource-copy">
+    <span class="dtm-resource-kicker">RECURSOS GRATUITOS</span>
+    <h2>Prepárate para ISTQB CTFL</h2>
+    <p>
+      Practica con un banco de 100 preguntas, simuladores de 40 preguntas
+      y resultados por tema. Sin registro y sin costo.
+    </p>
+    <a class="dtm-resource-button" href="/istqb-simulator/">
+      Abrir simulador ISTQB →
+    </a>
+  </div>
+
+  <div class="dtm-resource-card" aria-label="Características del simulador">
+    <strong>ISTQB CTFL Trainer</strong>
+    <span>100 preguntas</span>
+    <span>Simulador de 40</span>
+    <span>Resultados por tema</span>
+  </div>
+</section>
+
+<style>
+.dtm-resource-section {
+  display: grid;
+  grid-template-columns: 1.25fr .75fr;
+  gap: 28px;
+  align-items: center;
+  padding: clamp(34px, 6vw, 76px);
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 24px;
+  background:
+    linear-gradient(135deg, rgba(39,211,226,.08), transparent 50%),
+    #111f2b;
+  color: #f2f7fa;
+}
+
+.dtm-resource-kicker {
+  color: #64eef5;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.dtm-resource-copy h2 {
+  margin: 10px 0 12px;
+  font-size: clamp(30px, 5vw, 52px);
+  line-height: 1.05;
+}
+
+.dtm-resource-copy p {
+  max-width: 650px;
+  color: #9fb0bc;
+}
+
+.dtm-resource-button {
+  display: inline-flex;
+  margin-top: 14px;
+  min-height: 48px;
+  align-items: center;
+  padding: 0 18px;
+  border-radius: 12px;
+  background: #27d3e2;
+  color: #031217;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.dtm-resource-card {
+  display: grid;
+  gap: 10px;
+  padding: 24px;
+  border: 1px solid rgba(39,211,226,.28);
+  border-radius: 18px;
+  background: rgba(39,211,226,.06);
+}
+
+.dtm-resource-card strong { font-size: 22px; }
+.dtm-resource-card span { color: #c9d5dc; }
+
+@media (max-width: 760px) {
+  .dtm-resource-section { grid-template-columns: 1fr; }
+}
+</style>
