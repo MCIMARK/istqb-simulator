@@ -289,7 +289,7 @@
     const correct = state.questions.filter(q => state.answers[q.id] === q.answer).length;
     const total = state.questions.length;
     const percent = Math.round((correct / total) * 1000) / 10;
-    const passed = percent >= 65;
+    const passed = percent >= 80;
 
     state.result = { correct, total, percent, passed };
     saveHistory();
@@ -305,10 +305,10 @@
 
     if (state.modeKey === "exam") {
       $("resultTitle").textContent = passed ? "Simulador aprobado" : "Simulador por reforzar";
-      const threshold = Math.ceil(total * 0.65);
+      const threshold = Math.ceil(total * 0.80);
       $("resultMessage").textContent = auto
-        ? `El tiempo terminó. Obtuviste ${correct} aciertos. En este simulador se requieren ${threshold} de ${total} para alcanzar el 65%.`
-        : `Obtuviste ${correct} aciertos. En este simulador se requieren ${threshold} de ${total} para alcanzar el 65%.`;
+        ? `El tiempo terminó. Obtuviste ${correct} aciertos. En este simulador se requieren ${threshold} de ${total} para alcanzar la meta del 80%.`
+        : `Obtuviste ${correct} aciertos. En este simulador se requieren ${threshold} de ${total} para alcanzar la meta del 80%.`;
     } else {
       $("resultTitle").textContent = "Sesión terminada";
       $("resultMessage").textContent = `Resultado: ${correct} de ${total} respuestas correctas. Usa el desglose para decidir qué temas repasar.`;
